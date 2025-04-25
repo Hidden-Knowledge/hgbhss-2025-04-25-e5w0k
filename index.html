@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hgbhss - Premium E-commerce</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hover-grow { transition: transform 0.3s ease-in-out; }
+        .hover-grow:hover { transform: scale(1.02); }
+        
+        .feature-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #000;
+            transform: translateY(-1px);
+        }
+        
+        .social-link {
+            transition: all 0.3s ease-in-out;
+        }
+        .social-link:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -17,24 +61,31 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center">
-                <a href="/" class="text-2xl font-bold">hgbhss</a>
+                <a href="https://Hidden-Knowledge.github.io/hgbhss-2025-04-25-e5w0k" class="text-2xl font-bold hover-grow">hgbhss</a>
             </div>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-gray-600 hover:text-black transition-colors">Shop</a>
-                <a href="#" class="text-gray-600 hover:text-black transition-colors">About</a>
-                <a href="#" class="text-gray-600 hover:text-black transition-colors">Contact</a>
+                <a href="#features" class="nav-link text-gray-600">Shop</a>
+                <a href="#about" class="nav-link text-gray-600">About</a>
+                <a href="#contact" class="nav-link text-gray-600">Contact</a>
             </div>
 
             <div class="flex items-center space-x-4">
-                <button class="hidden md:block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                <button class="hidden md:block bg-black text-white px-6 py-2 rounded-full cta-button">
                     Buy Now
                 </button>
-                <button class="md:hidden">
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white w-full border-t">
+            <a href="#features" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Shop</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">About</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Contact</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -48,8 +99,8 @@
         <div class="relative container mx-auto px-4 h-full flex items-center">
             <div class="max-w-4xl mx-auto text-center text-white">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6">hgbhss</h1>
-                <p class="text-xl md:text-2xl mb-8">htyhjjhr</p>
-                <button class="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                <p class="text-xl md:text-2xl mb-8">Elevate Your Lifestyle with Premium Quality</p>
+                <button class="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold cta-button">
                     Shop Now
                 </button>
             </div>
@@ -57,32 +108,32 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="features" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Features</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Premium Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
                     <div class="text-3xl mb-4">
                         <i class="fas fa-check-circle text-black"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">vfdf</h3>
-                    <p class="text-gray-600">Premium quality and innovative design</p>
+                    <h3 class="text-xl font-semibold mb-4">Superior Quality</h3>
+                    <p class="text-gray-600">Meticulously crafted with premium materials for unmatched durability and style.</p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
                     <div class="text-3xl mb-4">
                         <i class="fas fa-star text-black"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">ggddg</h3>
-                    <p class="text-gray-600">Exceptional performance and durability</p>
+                    <h3 class="text-xl font-semibold mb-4">Innovation</h3>
+                    <p class="text-gray-600">Cutting-edge design meets functionality for an exceptional user experience.</p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
                     <div class="text-3xl mb-4">
                         <i class="fas fa-heart text-black"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">rhhg</h3>
-                    <p class="text-gray-600">Customer satisfaction guaranteed</p>
+                    <h3 class="text-xl font-semibold mb-4">Satisfaction</h3>
+                    <p class="text-gray-600">100% satisfaction guaranteed with our comprehensive customer support.</p>
                 </div>
             </div>
         </div>
@@ -94,15 +145,15 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6">gfd</h2>
-                    <p class="text-gray-600 mb-8">Experience the difference with our premium products.</p>
-                    <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors">
+                    <h2 class="text-3xl font-bold mb-6">Exceptional Performance</h2>
+                    <p class="text-gray-600 mb-8">Experience unparalleled performance with our state-of-the-art technology. Our products are designed to exceed expectations and deliver results that matter.</p>
+                    <button class="bg-black text-white px-8 py-3 rounded-full cta-button">
                         Learn More
                     </button>
                 </div>
                 <div class="w-full md:w-1/2">
                     <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
-                         class="rounded-2xl shadow-lg" alt="Benefit 1">
+                         class="rounded-2xl shadow-lg hover-grow" alt="Benefit 1">
                 </div>
             </div>
         </div>
@@ -114,12 +165,12 @@
             <div class="flex flex-col-reverse md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/2">
                     <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                         class="rounded-2xl shadow-lg" alt="Benefit 2">
+                         class="rounded-2xl shadow-lg hover-grow" alt="Benefit 2">
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6">hhh</h2>
-                    <p class="text-gray-600 mb-8">Discover excellence in every detail.</p>
-                    <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors">
+                    <h2 class="text-3xl font-bold mb-6">Premium Design</h2>
+                    <p class="text-gray-600 mb-8">Every detail is thoughtfully considered and expertly crafted to create products that are both beautiful and functional. Experience the perfect blend of form and function.</p>
+                    <button class="bg-black text-white px-8 py-3 rounded-full cta-button">
                         Learn More
                     </button>
                 </div>
@@ -132,17 +183,83 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6">hhh</h2>
-                    <p class="text-gray-600 mb-8">Quality that speaks for itself.</p>
-                    <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors">
+                    <h2 class="text-3xl font-bold mb-6">Lasting Quality</h2>
+                    <p class="text-gray-600 mb-8">Built to last with premium materials and superior craftsmanship. Our commitment to quality ensures your investment stands the test of time.</p>
+                    <button class="bg-black text-white px-8 py-3 rounded-full cta-button">
                         Learn More
                     </button>
                 </div>
                 <div class="w-full md:w-1/2">
                     <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                         class="rounded-2xl shadow-lg" alt="Benefit 3">
+                         class="rounded-2xl shadow-lg hover-grow" alt="Benefit 3">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Us</h2>
+            <div class="space-y-8">
+                <p class="text-gray-600 leading-relaxed">
+                    Founded in 2020, hgbhss emerged from a vision to revolutionize the industry with innovative solutions. Our journey began with a small team of passionate individuals committed to creating exceptional products that make a difference in people's lives.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Our mission is to deliver premium quality products while maintaining the highest standards of customer service and satisfaction. We believe in sustainable practices, continuous innovation, and building lasting relationships with our customers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl hover-grow">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Absolutely amazing quality! The attention to detail is outstanding."</p>
+                    <p class="font-semibold">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">Marketing Director</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl hover-grow">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Best purchase I've made this year. The customer service is exceptional and the product exceeded my expectations."</p>
+                    <p class="font-semibold">Michael Chen</p>
+                    <p class="text-sm text-gray-500">Tech Entrepreneur</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl hover-grow">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Incredible value for money. I've been using it daily for 6 months and it still looks brand new."</p>
+                    <p class="font-semibold">Emma Davis</p>
+                    <p class="text-sm text-gray-500">Product Designer</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl hover-grow">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Fast shipping and premium packaging. The product quality is outstanding."</p>
+                    <p class="font-semibold">James Wilson</p>
+                    <p class="text-sm text-gray-500">Business Analyst</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 bg-black">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=900&fit=crop&q=80" 
+                 class="w-full h-full object-cover opacity-20" alt="CTA background">
+        </div>
+        <div class="relative container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Ready to Experience Excellence?</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">Join thousands of satisfied customers who have chosen premium quality and exceptional service.</p>
+            <button class="bg-white text-black px-10 py-4 rounded-full text-lg font-semibold cta-button">
+                Shop Now
+            </button>
         </div>
     </section>
 
@@ -151,58 +268,82 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-4">
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors">
-                        What makes our products unique?
+                <div class="bg-white rounded-lg shadow-md hover-grow">
+                    <button class="w-full px-6 py-4 text-left font-semibold">
+                        What makes your products unique?
                         <i class="fas fa-plus float-right"></i>
                     </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">Our products combine premium materials, innovative design, and exceptional craftsmanship to deliver unmatched quality and performance.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors">
-                        How long is shipping?
+                
+                <div class="bg-white rounded-lg shadow-md hover-grow">
+                    <button class="w-full px-6 py-4 text-left font-semibold">
+                        What are your shipping times?
                         <i class="fas fa-plus float-right"></i>
                     </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">We offer fast worldwide shipping with delivery within 5 business days for most locations.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors">
-                        What's your return policy?
+                
+                <div class="bg-white rounded-lg shadow-md hover-grow">
+                    <button class="w-full px-6 py-4 text-left font-semibold">
+                        What is your return policy?
                         <i class="fas fa-plus float-right"></i>
                     </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">We offer a 30-day satisfaction guarantee with free returns on all products.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md hover-grow">
+                    <button class="w-full px-6 py-4 text-left font-semibold">
+                        How can I contact customer support?
+                        <i class="fas fa-plus float-right"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">Our customer support team is available 24/7 via email and live chat to assist you.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-16">
+    <footer id="contact" class="bg-black text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">hgbhss</h3>
-                    <p class="text-gray-400">Premium quality products</p>
+                    <p class="text-gray-400">Premium quality products for discerning customers</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact</h3>
                     <p class="text-gray-400">ggf@foodcle.com</p>
+                    <p class="text-gray-400">+1 (555) 123-4567</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Links</h3>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shop</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="https://Hidden-Knowledge.github.io/hgbhss-2025-04-25-e5w0k/blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="https://Hidden-Knowledge.github.io/hgbhss-2025-04-25-e5w0k/privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://Hidden-Knowledge.github.io/hgbhss-2025-04-25-e5w0k/terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="social-link text-gray-400 hover:text-white">
                             <i class="fab fa-instagram text-2xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="social-link text-gray-400 hover:text-white">
                             <i class="fab fa-twitter text-2xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="social-link text-gray-400 hover:text-white">
                             <i class="fab fa-facebook text-2xl"></i>
                         </a>
                     </div>
@@ -213,5 +354,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
